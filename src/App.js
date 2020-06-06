@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+// import React from "react";
+// import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
 import Fetch from "./Fetch";
 
+import axios from "axios";
 import "./App.css";
 
 function App() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [query, setQuery] = useState([""]);
   query
@@ -31,8 +35,15 @@ function App() {
     </div>
 =======
   const [query, setQuery] = useState([]);
+=======
+  const [query, setQuery] = useState([""]);
+  // query
+  //   .toString()
+  //   .split(",")
+  //   .map((x, i) => console.log(x + " joba", i));
+>>>>>>> parent of 0611d91... delete unsued commented codes / App.js
 
-  const myChangeHandler = () => {
+  const myChangeHandler = (e) => {
     setQuery(document.getElementById("myText").value);
   };
 
@@ -42,12 +53,17 @@ function App() {
         <input type="text" id="myText" />
         <button onClick={myChangeHandler}>Enter</button>
       </div>
+
       {query
         .toString()
         .split(",")
-        .map((x, i) => (
-          <Fetch ok={x} key={i} />
-        ))}
+        .map(
+          (x, i) => (
+            // <ObjectRow key={i} />
+            console.log(x + " joba", i), (<Fetch ok={x} key={i} />)
+          )
+        )}
+      {/* <Fetch ok={"london"} /> */}
     </>
 >>>>>>> parent of 5fb3b37... Move query to a new component / App.js
   );
