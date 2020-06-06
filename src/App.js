@@ -37,6 +37,7 @@ function App() {
   const [query, setQuery] = useState([]);
 =======
   const [query, setQuery] = useState([""]);
+<<<<<<< HEAD
   // query
   //   .toString()
   //   .split(",")
@@ -46,14 +47,16 @@ function App() {
   const myChangeHandler = (e) => {
     setQuery(document.getElementById("myText").value);
   };
+=======
+  query
+    .toString()
+    .split(",")
+    .map((x, i) => console.log(x + " joba", i));
+>>>>>>> parent of b8442c8... add submit button to input box / App.js
 
   return (
     <>
-      <div>
-        <input type="text" id="myText" />
-        <button onClick={myChangeHandler}>Enter</button>
-      </div>
-
+      <input onChange={(e) => setQuery(e.target.value)} />
       {query
         .toString()
         .split(",")

@@ -10,17 +10,6 @@ function Fetch(props) {
   useEffect(() => {
     const fetchData = () => {
       console.log("inside: ", props);
-      if (!props.ok) {
-        return;
-      } else {
-        axios
-          .get(
-            `https://api.openweathermap.org/data/2.5/weather?q=${props.ok}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
-          )
-          .then((res) => {
-            setData(res);
-          });
-      }
       {
         // query
         //   .toString()
@@ -29,13 +18,13 @@ function Fetch(props) {
         //     (x, i) => (
         //       // <ObjectRow key={i} />
         //       console.log(x + " joba"),
-        // axios
-        //   .get(
-        //     `https://api.openweathermap.org/data/2.5/weather?q=${props.ok}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
-        //   )
-        //   .then((res) => {
-        //     setData(res);
-        //   });
+        axios
+          .get(
+            `https://api.openweathermap.org/data/2.5/weather?q=${props.ok}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
+          )
+          .then((res) => {
+            setData(res);
+          });
         //     )
         //   );
       }
@@ -48,7 +37,7 @@ function Fetch(props) {
       {/* <input onChange={(e) => setQuery(e.target.value)} /> */}
 
       {!data.data ? (
-        "Add a valid location and hit enter"
+        "isLoading"
       ) : (
         <>
           <AppBody data={data} />
