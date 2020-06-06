@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -20,6 +21,33 @@ function App() {
         </a>
       </header>
     </div>
+=======
+import React, { useState } from "react";
+import Fetch from "./Fetch";
+
+import "./App.css";
+
+function App() {
+  const [query, setQuery] = useState([]);
+
+  const myChangeHandler = () => {
+    setQuery(document.getElementById("myText").value);
+  };
+
+  return (
+    <>
+      <div>
+        <input type="text" id="myText" />
+        <button onClick={myChangeHandler}>Enter</button>
+      </div>
+      {query
+        .toString()
+        .split(",")
+        .map((x, i) => (
+          <Fetch ok={x} key={i} />
+        ))}
+    </>
+>>>>>>> parent of 5fb3b37... Move query to a new component / App.js
   );
 }
 
