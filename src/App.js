@@ -1,36 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import Fetch from "./Fetch";
-=======
 // import React from "react";
 // import logo from "./logo.svg";
 import React, { useState, useEffect } from "react";
 import { AppBody } from "./AppBody";
->>>>>>> parent of dca7d70... move fetch request to a new component / App.js
 
 import "./App.css";
 
 function App() {
-<<<<<<< HEAD
-  const [query, setQuery] = useState([]);
-
-  const myChangeHandler = () => {
-    setQuery(document.getElementById("myText").value);
-  };
-
-  return (
-    <>
-      <div>
-        <input type="text" id="myText" />
-        <button onClick={myChangeHandler}>Enter</button>
-      </div>
-      {query
-        .toString()
-        .split(",")
-        .map((x, i) => (
-          <Fetch ok={x} key={i} />
-        ))}
-=======
   const [data, setData] = useState({});
   const [query, setQuery] = useState([""]);
 
@@ -74,7 +49,6 @@ function App() {
           <AppBody data={data} />
         </div>
       )}
->>>>>>> parent of dca7d70... move fetch request to a new component / App.js
     </>
   );
 }
