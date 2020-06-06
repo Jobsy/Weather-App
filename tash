@@ -1,0 +1,29 @@
+[33m49ec80c[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m HEAD@{0}: commit (initial): commit all after file corrupt
+[33ma2b8bce[m HEAD@{1}: commit: update naming convention / Fetch.js
+[33m3e7b5c5[m HEAD@{2}: reset: moving to HEAD~
+[33m8dc63aa[m HEAD@{3}: commit: update naming convention / Fetch.js
+[33m3e7b5c5[m HEAD@{4}: commit: create new component for query / Query.js
+[33m5fb3b37[m HEAD@{5}: commit: Move query to a new component / App.js
+[33medcd654[m HEAD@{6}: commit: handle dependency error for useffect / delete unsued commented codes / fetch.js
+[33m9cfd52d[m HEAD@{7}: commit: delete unused commented codes / AppBody.js
+[33m0611d91[m HEAD@{8}: commit: delete unsued commented codes / App.js
+[33m09c2223[m HEAD@{9}: commit: add conditional statement to handle empty string error / Fetch.js
+[33mb8442c8[m HEAD@{10}: commit: add submit button to input box / App.js
+[33m8ec37ba[m HEAD@{11}: commit: accept location from props / Fetch.js
+[33m6d6538c[m HEAD@{12}: commit: add map function to iterate over input data / add key to each data / pass location value to fetch component / App.js
+[33m4ef4eed[m HEAD@{13}: commit: create new component for fetch request / Fetch.js
+[33m8d51571[m HEAD@{14}: commit: update app body / AppBody.js
+[33mdca7d70[m HEAD@{15}: commit: move fetch request to a new component / App.js
+[33m95d9d22[m HEAD@{16}: commit: create a new component for app body / AppBody.js
+[33med578e6[m HEAD@{17}: commit: move app body to a new component / App.js
+[33me424d7b[m HEAD@{18}: commit: add main weather, and visibility / App.js
+[33m981e7b6[m HEAD@{19}: commit: convert UTC timezone to GMT / App.js
+[33mc77872a[m HEAD@{20}: commit: add sunrise and sunset / convert unix, UTC time to local / App.js
+[33m2b4db40[m HEAD@{21}: commit: add wind degree and img icon / App.js
+[33mbd03808[m HEAD@{22}: commit: add units to variable / App.js
+[33mbcca15e[m HEAD@{23}: commit: add tenary condition to handle handle undefine before component mounts / App.js
+[33m1470fd2[m HEAD@{24}: commit: display selected data to the dom / App.js
+[33m5fcf11c[m HEAD@{25}: commit: fetch data from openweathermap with state name / App.js
+[33mbe01da9[m HEAD@{26}: commit: install and add dependencies for axios / package-lock.json
+[33m2a3448e[m HEAD@{27}: commit: install and add dependencies for axios / package.json
+[33mb7419e4[m HEAD@{28}: commit (initial): Initialize project using Create React App
