@@ -5,6 +5,7 @@ import axios from "axios";
 
 function Fetch(props) {
   const [data, setData] = useState({});
+  //   const [query, setQuery] = useState([""]);
 
   useEffect(() => {
     const fetchData = () => {
@@ -20,12 +21,32 @@ function Fetch(props) {
             setData(res);
           });
       }
+      {
+        // query
+        //   .toString()
+        //   .split(",")
+        //   .map(
+        //     (x, i) => (
+        //       // <ObjectRow key={i} />
+        //       console.log(x + " joba"),
+        // axios
+        //   .get(
+        //     `https://api.openweathermap.org/data/2.5/weather?q=${props.ok}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
+        //   )
+        //   .then((res) => {
+        //     setData(res);
+        //   });
+        //     )
+        //   );
+      }
     };
     fetchData();
-  }, [props]);
+  }, [props.ok]);
 
   return (
     <>
+      {/* <input onChange={(e) => setQuery(e.target.value)} /> */}
+
       {!data.data ? (
         "Add a valid location and hit enter"
       ) : (
