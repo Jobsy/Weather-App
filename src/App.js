@@ -4,6 +4,7 @@ import Fetch from "./Fetch";
 import "./App.css";
 
 function App() {
+<<<<<<< HEAD
   const [query, setQuery] = useState([""]);
   query
     .toString()
@@ -28,6 +29,27 @@ function App() {
       Humidity: {`${data.data.main.humidity}`} <br />
       Wind Speed: {`${data.data.wind.speed}`} <br />
     </div>
+=======
+  const [query, setQuery] = useState([]);
+
+  const myChangeHandler = () => {
+    setQuery(document.getElementById("myText").value);
+  };
+
+  return (
+    <>
+      <div>
+        <input type="text" id="myText" />
+        <button onClick={myChangeHandler}>Enter</button>
+      </div>
+      {query
+        .toString()
+        .split(",")
+        .map((x, i) => (
+          <Fetch ok={x} key={i} />
+        ))}
+    </>
+>>>>>>> parent of 5fb3b37... Move query to a new component / App.js
   );
 }
 
