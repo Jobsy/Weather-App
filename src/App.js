@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Fetch from "./Fetch";
 
@@ -21,7 +20,6 @@ function App() {
           <Fetch ok={x} key={i} />
         ))}
     </>
->>>>>>> parent of 5fb3b37... Move query to a new component / App.js
   );
 }
 
