@@ -3,38 +3,36 @@ import { AppBody } from "./AppBody";
 
 import axios from "axios";
 
-function Fetch(props) {
+function Fetch() {
   const [data, setData] = useState({});
-  //   const [query, setQuery] = useState([""]);
+  const [query, setQuery] = useState([""]);
 
   useEffect(() => {
     const fetchData = () => {
-      console.log("inside: ", props);
       {
-        // query
-        //   .toString()
-        //   .split(",")
-        //   .map(
-        //     (x, i) => (
-        //       // <ObjectRow key={i} />
-        //       console.log(x + " joba"),
-        axios
-          .get(
-            `https://api.openweathermap.org/data/2.5/weather?q=${props.ok}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
-          )
-          .then((res) => {
-            setData(res);
-          });
-        //     )
-        //   );
+        query
+          .toString()
+          .split(",")
+          .map(
+            (x, i) => (
+              console.log(x + " joba", i),
+              axios
+                .get(
+                  `https://api.openweathermap.org/data/2.5/weather?q=${x}&appid=fc9f9afc89ac3adf6ea79c6cecd34476&units=metric`
+                )
+                .then((res) => {
+                  setData(res);
+                })
+            )
+          );
       }
     };
     fetchData();
-  }, [props.ok]);
+  }, [query]);
 
   return (
     <>
-      {/* <input onChange={(e) => setQuery(e.target.value)} /> */}
+      <input onChange={(e) => setQuery(e.target.value)} />
 
       {!data.data ? (
         "isLoading"
