@@ -12,15 +12,6 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
-      <input onChange={(e) => setQuery(e.target.value)} />
-      {query
-        .toString()
-        .split(",")
-        .map((x, i) => (
-          <Fetch ok={x} key={i} />
-        ))}
-=======
       {!data.data ? (
         "isLoading"
       ) : (
@@ -56,7 +47,6 @@ function App() {
           />
         </div>
       )}
->>>>>>> parent of e424d7b... add main weather,  and visibility / App.js
     </>
   );
 }
