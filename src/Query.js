@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Fetch } from "./Fetch";
-import { Segment, Input, Button } from "semantic-ui-react";
 
 export const Query = () => {
   const [query, setQuery] = useState([]);
@@ -44,15 +43,6 @@ export const Query = () => {
             </div>
           </div>
         </div>
-        {/* )} */}
-        {/* <div>
-        <input type="text" id="location" />
-        <button onClick={setLocation}>Enter</button>
-      </div> */}
-        {/* <Segment>
-          <Input id="location" inverted placeholder="Search..." />
-          <Button content="Enter" onClick={setLocation} />
-        </Segment> */}
       </div>
       <div className="group2">
         {query
