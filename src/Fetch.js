@@ -27,7 +27,7 @@ export const Fetch = (props) => {
   return (
     <>
       {!data.data ? (
-        "Add a valid location(s) and hit enter"
+        <p>Add a valid location(s) and hit enter</p>
       ) : (
         <>
           <AppBody data={data} />
