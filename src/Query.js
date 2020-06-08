@@ -9,7 +9,7 @@ export const Query = () => {
   };
 
   const showSubmitButton = (e) => {
-    const submit = document.querySelector(".submit-container");
+    const submit = document.querySelector(".submitContainer");
     if (e.target.value) {
       submit.style.opacity = "1";
     } else {
@@ -23,17 +23,17 @@ export const Query = () => {
         <h1>Weather App</h1>
         <div className="inputContainer">
           <div className="input">
-            <div className="input-container">
+            <div className="inputContainer2">
               <input
                 type="email"
-                className="input-field"
+                className="inputField"
                 id="location"
                 placeholder="Enter a location(state) or comma separated locations"
                 onChange={showSubmitButton}
               />
-              <div className="input-field-shadow"></div>
+              <div className="inputField-shadow"></div>
             </div>
-            <div className="submit-container">
+            <div className="submitContainer">
               <input
                 type="submit"
                 className="submit-btn"
