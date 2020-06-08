@@ -8,7 +8,6 @@ export const Fetch = (props) => {
 
   useEffect(() => {
     const fetchData = () => {
-      console.log("inside: ", props);
       if (!props.locations) {
         return;
       } else {
@@ -27,7 +26,7 @@ export const Fetch = (props) => {
   return (
     <>
       {!data.data ? (
-        <p>Add a valid location(s) and hit enter</p>
+        <p>Add a valid location(s) and hit submit</p>
       ) : (
         <>
           <AppBody data={data} />
