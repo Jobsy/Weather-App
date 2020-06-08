@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Fetch } from "./Fetch";
-import { Card, Icon, Image, Label, Reveal } from "semantic-ui-react";
 
 export const Query = () => {
   const [query, setQuery] = useState([]);

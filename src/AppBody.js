@@ -98,17 +98,17 @@ export const AppBody = (props) => (
           </Card.Content>
 
           <Card.Content extra>
-            <a>
+            <p>
               <Icon name="weight" color="violet" />
               {`Pressure: ${props.data.data.main.pressure} hPa`}
-            </a>
+            </p>
           </Card.Content>
 
           <Card.Content extra>
-            <a>
+            <p>
               <Icon name="tint" color="brown" />
               {`Humidity: ${props.data.data.main.humidity} %`} <br />
-            </a>
+            </p>
           </Card.Content>
         </Card>
       </Reveal.Content>
