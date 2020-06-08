@@ -27,9 +27,9 @@ export const Query = () => {
           .toString()
           .split(",")
           .map((locations, index) => (
-            <>
-              <Fetch locations={locations} key={index} />
-            </>
+            <div key={index}>
+              <Fetch locations={locations} />
+            </div>
           ))}
       </div>
     </div>
