@@ -10,8 +10,8 @@ export const Query = () => {
   };
 
   return (
-    <div class="mainGroup">
-      <div class="group1">
+    <div className="mainGroup">
+      <div className="group1">
         <h1>Weather App</h1>
         {/* <div>
         <input type="text" id="location" />
@@ -22,7 +22,7 @@ export const Query = () => {
           <Button content="Enter" onClick={setLocation} />
         </Segment>
       </div>
-      <div class="group2">
+      <div className="group2">
         {query
           .toString()
           .split(",")
