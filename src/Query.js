@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { Fetch } from "./Fetch";
+
 export const Query = () => {
   const [query, setQuery] = useState([]);
 
@@ -11,16 +14,12 @@ export const Query = () => {
         <input type="text" id="location" />
         <button onClick={setLocation}>Enter</button>
       </div>
-      <div class="group">
-        {query
-          .toString()
-          .split(",")
-          .map((locations, index) => (
-            <>
-              <Fetch locations={locations} key={index} />
-            </>
-          ))}
-      </div>
+      {query
+        .toString()
+        .split(",")
+        .map((locations, index) => (
+          <Fetch locations={locations} key={index} />
+        ))}
     </>
   );
 };
