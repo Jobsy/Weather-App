@@ -8,7 +8,6 @@ import "font-awesome/css/font-awesome.min.css";
 function App() {
   return (
     <>
-      <h1>Weather App</h1>
       <Query />
     </>
   );
