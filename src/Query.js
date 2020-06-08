@@ -22,21 +22,25 @@ export const Query = () => {
     <div className="mainGroup">
       <div className="group1">
         <h1>Weather App</h1>
-        <div class="inputContainer">
-          <div class="input">
-            <div class="input-container">
+        <div className="inputContainer">
+          <div className="input">
+            <div className="input-container">
               <input
                 type="email"
-                class="input-field"
+                className="input-field"
                 id="location"
                 placeholder="Enter a location(state) or comma separated locations"
                 onChange={showSubmitButton}
               />
-              <div class="input-field-shadow"></div>
+              <div className="input-field-shadow"></div>
             </div>
-            <div class="submit-container">
-              <input type="submit" class="submit-btn" onClick={setLocation} />
-              <div class="submit-btn-shadow"></div>
+            <div className="submit-container">
+              <input
+                type="submit"
+                className="submit-btn"
+                onClick={setLocation}
+              />
+              <div className="submit-btn-shadow"></div>
             </div>
           </div>
         </div>
