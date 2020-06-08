@@ -9,7 +9,8 @@ export const Query = () => {
   };
 
   return (
-    <>
+    <div class="mainGroup">
+      <h1>Weather App</h1>
       <div>
         <input type="text" id="location" />
         <button onClick={setLocation}>Enter</button>
@@ -24,6 +25,6 @@ export const Query = () => {
             </>
           ))}
       </div>
-    </>
+    </div>
   );
 };
