@@ -1,5 +1,5 @@
 import React from "react";
-import { Query } from "./Query";
+import { Query } from "./components/Query";
 
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
