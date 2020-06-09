@@ -26,7 +26,10 @@ export const Fetch = (props) => {
   return (
     <>
       {!data.data ? (
-        <p>Add a valid location(s) and hit submit</p>
+        <div>
+          <p className="pLoader">Add a valid location(s) and hit submit</p>
+          <div className="loader">Loading...</div>
+        </div>
       ) : (
         <>
           <AppBody data={data} />
