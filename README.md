@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/39263b0e-be64-4a11-8dba-84805da81430/deploy-status)](https://app.netlify.com/sites/elegant-rosalind-4d5aed/deploys)
+
 ## Weather App
 
 This is a simple ReactJs App that utilises the free backend API built by [Openweathermap](https://openweathermap.org/).
