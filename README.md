@@ -12,7 +12,7 @@ The App when successfully launched can be used to check weather condition/report
     $ cd weather-app
     $ npm install
 
-## Using the Application
+## Using the Application locally
 
     When the user opens application, the following API call is made:
 
@@ -70,6 +70,12 @@ The App when successfully launched can be used to check weather condition/report
         }
 
     If the app is opened while the API requests are being made it show a suitable loading screen
+
+## Using the Application via Browser
+
+Simply navigate to the app's homepage [Weather App](https://elegant-rosalind-4d5aed.netlify.app/).
+
+Enter a location (the name of a state of any known country on the map), or comma separated locations at once then hit submit to view the weather conditions/reports of your inputed location(s)
 
 ## Structure and Naming
 
