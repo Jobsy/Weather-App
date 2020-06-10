@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#root {
+  background: whitesmoke;
+}
+
+.header1 {
+  /* color: red; */
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.mainGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2em;
+  background: whitesmoke;
+  /* flex-wrap: wrap; */
+}
+.group1 {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: baseline;
+  justify-content: space-between;
+  width: 90%;
+  background: whitesmoke;
+  /* text-align: center; */
+  /* margin: 2em; */
+  /* flex-wrap: wrap; */
+}
+.group2 {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  background: ghostwhite;
+}
+
+.appBody {
+  margin: 1em;
+}
+
+/* start: styling for hiding and showing input submit button */
+.inputContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  background-color: #f5f6fa;
+}
+.input {
+  position: relative;
+  display: flex;
+  width: 600px;
+  margin: 0 10px;
+}
+.input .inputContainer2 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 10px;
+}
+.input .inputContainer2 .inputField {
+  padding: 24px;
+  background-color: #fff;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  color: #b7bcdd;
+  outline: none;
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1;
+}
+.input .inputContainer2 .inputField::-webkit-input-placeholder {
+  color: #b7bcdd;
+  line-height: 1;
+  padding-top: 2px;
+}
+.input .inputContainer2 .inputField:hover + .inputField-shadow {
+  box-shadow: 0px 2px 10px #d8ddec;
+}
+.input .inputContainer2 .inputField:focus + .inputField-shadow {
+  box-shadow: 0px 8px 14px #d8ddec;
+  height: 50%;
+  width: 97%;
+  left: 2%;
+}
+.input .inputContainer2 .inputField-shadow {
+  position: absolute;
+  display: flex;
+  width: 99%;
+  height: 95%;
+  bottom: 0;
+  left: 1%;
+  z-index: -10;
+  box-shadow: 0px 0px 5px #d8ddec;
+  border-radius: 2px;
+  transition: all ease 240ms;
+}
+.input .submitContainer {
+  position: absolute;
+  z-index: 0;
+  margin: 10px;
+  right: -10px;
+  top: calc(25% - 11px);
+  opacity: 0;
+  transition: all ease 240ms;
+}
+.input .submitContainer .submit-btn {
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(148, 161, 245, 1);
+  padding: 12px 20px;
+  color: white;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  transition: all ease 240ms;
+  cursor: pointer;
+}
+.input .submitContainer .submit-btn:hover {
+  background-color: rgba(125, 141, 243, 1);
+}
+.input .submitContainer .submit-btn-shadow {
+  position: absolute;
+  display: flex;
+  width: 90%;
+  height: 50%;
+  bottom: 0;
+  left: 5%;
+  z-index: -5;
+  box-shadow: 0px 2px 10px #a3aadb;
+  border-radius: 2px;
+}
+/* end: styling for hiding and showing input submit button */
+
+/* mobile view */
+@media (max-width: 568px) {
+  .mainGroup {
+    width: auto;
+  }
+  .group1 {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+  .inputContainer {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+  }
+}
+@media (min-width: 640px) {
+  .inputContainer {
+    width: 68%;
+  }
+}
+
+@media (min-width: 823px) {
+  .inputContainer {
+    width: 75%;
+  }
+}
+
+/* start: styling for loader */
+.pLoader {
+  text-align: -webkit-center;
+  margin-bottom: 50px;
+}
+.loader {
+  margin-left: 200px;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #bdacab;
+  letter-spacing: 0.2em;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #bdacab;
+  position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+/* end: styling for loader */

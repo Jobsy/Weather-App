@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Icon, Image, Label, Reveal } from "semantic-ui-react";
 
 export const AppBody = (props) => (
-  <>
+  <div className="appBody">
     <Reveal animated="move" instant>
       <Reveal.Content visible>
         <Card>
@@ -66,19 +66,19 @@ export const AppBody = (props) => (
       <Reveal.Content hidden>
         <Card>
           <Card.Content extra>
-            <div cl>
-              <a>
+            <div className="header1">
+              <span>
                 <Icon name="sun outline" color="yellow" />
                 {` ${new Date(
                   props.data.data.sys.sunrise * 1000
                 ).toLocaleTimeString()} `}
-              </a>
-              <a>
+              </span>
+              <span>
                 {` ${new Date(
                   props.data.data.sys.sunset * 1000
                 ).toLocaleTimeString()} `}
                 <Icon name="sun" color="orange" />
-              </a>
+              </span>
             </div>
           </Card.Content>
 
@@ -98,20 +98,20 @@ export const AppBody = (props) => (
           </Card.Content>
 
           <Card.Content extra>
-            <a>
+            <p>
               <Icon name="weight" color="violet" />
               {`Pressure: ${props.data.data.main.pressure} hPa`}
-            </a>
+            </p>
           </Card.Content>
 
           <Card.Content extra>
-            <a>
+            <p>
               <Icon name="tint" color="brown" />
               {`Humidity: ${props.data.data.main.humidity} %`} <br />
-            </a>
+            </p>
           </Card.Content>
         </Card>
       </Reveal.Content>
     </Reveal>
-  </>
+  </div>
 );
