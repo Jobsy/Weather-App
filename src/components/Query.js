@@ -29,6 +29,7 @@ export const Query = () => {
                 className="inputField"
                 id="location"
                 placeholder="Enter a location(state) or comma separated locations"
+                autofocus
                 onChange={showSubmitButton}
               />
               <div className="inputField-shadow"></div>
