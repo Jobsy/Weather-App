@@ -25,7 +25,7 @@ export const Query = () => {
           <div className="input">
             <div className="inputContainer2">
               <input
-                type="email"
+                type="text"
                 className="inputField"
                 id="location"
                 placeholder="Enter a location(state) or comma separated locations"
