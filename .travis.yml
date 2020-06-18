@@ -1,11 +1,18 @@
 language: node_js
+
 node_js:
   - 10
+
+dist: trusty
+
 addons:
-  apt:
-    packages:
-      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
-      - libgconf-2-4
+  chrome: stable
+
+apt:
+  packages:
+    # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+    - libgconf-2-4
+
 cache:
   # Caches $HOME/.npm when npm ci is default script command
   # Caches node_modules in all other cases
@@ -15,10 +22,17 @@ cache:
     - ~/.npm
     - ~/.cache
     - ./.node_modules
+
 install:
   - npm ci
   - npm install --save-dev start-server-and-test
   - npm run build
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   # start server in the background
   # run all Cypress tests and record on the dashboard
@@ -27,7 +41,15 @@ script:
   # to kill all background jobs (like "npm start &")
   # this avoids flake in Travis jobs
   - kill $(jobs -p) || true
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+notifications:
+  email: false
+
 before_deploy: "echo ready?"
+
 deploy:
   provider: netlify
   site: $APP_ID
