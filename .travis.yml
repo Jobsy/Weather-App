@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 6
+cache: npm
+install:
+  - npm ci
+script:
+  - npm test
+  - npm run build
+deploy:
+  provider: netlify
+  site: $APP_ID
+  auth: $TRAVIS_ACCESS_TOKEN
+  edge: true # opt in to dpl v2
