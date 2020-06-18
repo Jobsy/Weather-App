@@ -21,7 +21,8 @@
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "cy:run": "cypress run",
+    "test": "start http://localhost:3000 cy:run",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"
   },
