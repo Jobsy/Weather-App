@@ -1,8 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
-![check-code-coverage](https://img.shields.io/badge/code--coverage-88.46%25-green)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/39263b0e-be64-4a11-8dba-84805da81430/deploy-status)](https://app.netlify.com/sites/elegant-rosalind-4d5aed/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/39263b0e-be64-4a11-8dba-84805da81430/deploy-status)](https://app.netlify.com/sites/elegant-rosalind-4d5aed/deploys) ![check-code-coverage](https://img.shields.io/badge/code--coverage-88.46%25-green) [![Maintainability](https://api.codeclimate.com/v1/badges/b0ad20251893513bb097/maintainability)](https://codeclimate.com/github/Jobsy/Weather-App/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/b0ad20251893513bb097/test_coverage)](https://codeclimate.com/github/Jobsy/Weather-App/test_coverage)
 
 ## Weather App
 
