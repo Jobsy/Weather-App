@@ -16,7 +16,14 @@ cache:
 install:
   - npm ci
 script:
-  - $(npm bin)/cypress run --record
+  # start server in the background
+  - npm run start:ci &
+  # run all Cypress tests and record on the dashboard
+  - npm run test
+  # after all tests finish running we need
+  # to kill all background jobs (like "npm start &")
+  # this avoids flake in Travis jobs
+  - kill $(jobs -p) || true
 deploy:
   provider: netlify
   site: $APP_ID
