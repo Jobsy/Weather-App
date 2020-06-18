@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cypress/instrument-cra": "^1.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.10",
@@ -18,7 +19,7 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -40,6 +41,14 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^4.8.0"
+    "@cypress/code-coverage": "^3.8.1",
+    "babel-plugin-istanbul": "^6.0.0",
+    "cypress": "^4.8.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "exclude": [
+      "src/serviceWorker.js"
+    ]
   }
 }
