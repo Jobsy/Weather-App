@@ -27,8 +27,14 @@ script:
   # to kill all background jobs (like "npm start &")
   # this avoids flake in Travis jobs
   - kill $(jobs -p) || true
+before_deploy: "echo ready?"
 deploy:
   provider: netlify
   site: $APP_ID
   auth: $TRAVIS_ACCESS_TOKEN
   edge: true # opt in to dpl v2
+  cleanup: true
+  # after_deploy:
+  after_success:
+    - chmod +x ./publish.sh
+    - ./publish.sh
