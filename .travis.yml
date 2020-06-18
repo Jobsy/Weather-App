@@ -16,7 +16,7 @@ cache:
 install:
   - npm ci
 script:
-  - $(npm bin)/cypress run
+  - $(npm bin)/cypress run --record
 deploy:
   provider: netlify
   site: $APP_ID
